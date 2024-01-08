@@ -108,6 +108,7 @@ var specialCharacters = [
         return;
       }
 
+//  Confirmation prompt for user to choose Password characters 
       var lowerCaseConfirmation = confirm("Do you want to have lower case characters in your Password?")
       var upperCaseConfirmation = confirm("Do you want to have UPPERCASE characters in your Password?")
       var numericConfirmation = confirm("Do you want to have Numeric characters in your Password?")
