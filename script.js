@@ -122,6 +122,16 @@ var specialCharacters = [
   console.log(numericConfirmation)
   console.log(specialCharactersConfirmation)
 
+//This if statement check and  validate if user pick at least on character type 
+// It alerts user and make sure user choose one charater type before contnuing to generate password
+      if (lowerCaseConfirmation === false && upperCaseConfirmation === false &&
+            numericConfirmation === false && specialCharactersConfirmation === false){
+                alert("At least one charater must be selected in order to generate password. Please choose one charater type from the previous option!");
+                return;
+            }
+
+
+
   }
 
   // Used the calling fucntion getPasswordOptions() in order for the prompt function above to work/display 
