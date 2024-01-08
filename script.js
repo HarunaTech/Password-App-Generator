@@ -91,16 +91,23 @@ var specialCharacters = [
   // Function to prompt user for password options
   // Declaring password length variable, checking the prompt & alert function and 
   // consologing to verify and and calling the function with [getPasswordOptions()]
-  // Creates a prompt box which takes in text input.
+  // parseInt() is used to converts a string to an integer. 
+  // (isNaN())This will consolog and convert to "NaN" Not-a-Number if something else is entered other than a number 
+  // Creates a prompt box which takes the user text input.
 
   function getPasswordOptions() {
-    var passwordlength = prompt("How many characters do you want in your password?");
-    if (passwordlength < 8 ){ 
+    var passwordlength = parseInt(prompt("How many characters do you want in your password?"));
+    if (passwordlength < 8 || passwordlength > 128 ){ 
         // Alerts user to input correct data.
-        alert("Please enter a number greater than 8 and less than 128");
+        alert("Please enter a number greater than 8 or less than 128");
        return;
       } 
-    
+      // This will check if the user input is not a number and prompt user to enter a number
+      if (isNaN(passwordlength)){
+        alert("Please enter a number greater than 8 or less than 128");
+        return;
+      }
+
   console.log(passwordlength)
   }
 
