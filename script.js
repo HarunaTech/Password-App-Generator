@@ -89,9 +89,25 @@ var specialCharacters = [
   ];
   
   // Function to prompt user for password options
+  // Declaring password length variable, checking the prompt & alert function and 
+  // consologing to verify and and calling the function with [getPasswordOptions()]
+  // Creates a prompt box which takes in text input.
+
   function getPasswordOptions() {
-  
+    var passwordlength = prompt("How many characters do you want in your password?");
+    if (passwordlength < 8 ){ 
+        // Alerts user to input correct data.
+        alert("Please enter a number greater than 8 and less than 128");
+       return;
+      } 
+    
+  console.log(passwordlength)
   }
+
+  // Used the calling fucntion getPasswordOptions() in order for the prompt function above to work/display 
+  getPasswordOptions()
+
+  
   
   // Function for getting a random element from an array
   function getRandom(arr) {
@@ -100,6 +116,7 @@ var specialCharacters = [
   
   // Function to generate password with user input
   function generatePassword() {
+    
   
   }
   
