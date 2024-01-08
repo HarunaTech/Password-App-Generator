@@ -108,7 +108,19 @@ var specialCharacters = [
         return;
       }
 
+      var lowerCaseConfirmation = confirm("Do you want to have lower case characters in your Password?")
+      var upperCaseConfirmation = confirm("Do you want to have UPPERCASE characters in your Password?")
+      var numericConfirmation = confirm("Do you want to have Numeric characters in your Password?")
+      var specialCharactersConfirmation = confirm("Do you want to have Special characters in your Password?")
+
+
+// This console.log is testing if thing are working correctly in the browser console
   console.log(passwordlength)
+  console.log(lowerCaseConfirmation)
+  console.log(upperCaseConfirmation)
+  console.log(numericConfirmation)
+  console.log(specialCharactersConfirmation)
+
   }
 
   // Used the calling fucntion getPasswordOptions() in order for the prompt function above to work/display 
