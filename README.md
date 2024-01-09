@@ -1,7 +1,7 @@
 # Password-Generator
 
 
-## Decription 
+## Description 
 
 This aim of this challenge is to create a web based javascript password generator application. A user will used the password application by clicking a button on the web page and follow a prompt to choose between specific password length and desired characters to be included in the password. The  requirement and accepeance criteria are as follows;
 

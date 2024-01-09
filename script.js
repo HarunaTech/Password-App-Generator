@@ -150,9 +150,6 @@ var specialCharacters = [
 
   // Function for getting a random element from an array
   // This function provides a way to get a random element from an array each time it is called.
-  // It ensures that the index is within the valid range for the given array arr.
-  // This will get and generate random index between 0 and array.length and truncate any decimal point
-  // It will generate a whole number between 0 (inclusive) and arr.length (exclusive).
   function getRandom(arr) {
 
     // This will generate a random index within the bounds of the array
