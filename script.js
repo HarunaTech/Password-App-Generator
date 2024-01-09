@@ -122,7 +122,7 @@ var specialCharacters = [
   console.log(numericConfirmation)
   console.log(specialCharactersConfirmation)
 
-//This if statement check and  validate if user pick at least on character type 
+// This if statement check and  validate if user pick at least on character type 
 // It alerts user and make sure user choose one charater type before contnuing to generate password
       if (lowerCaseConfirmation === false && upperCaseConfirmation === false &&
             numericConfirmation === false && specialCharactersConfirmation === false){
@@ -130,7 +130,16 @@ var specialCharacters = [
                 return;
             }
 
-
+// This function creates new object Password options and return back the calling function. 
+// It will check options for this password through the functions declared.
+        let PasswordOptions = {
+            passwordlength: passwordlength,
+            lowerCaseConfirmation: lowerCaseConfirmation,
+            upperCaseConfirmation: upperCaseConfirmation,
+            numericConfirmation: numericConfirmation,
+            specialCharactersConfirmation: specialCharactersConfirmation,
+        };
+        return PasswordOptions;
 
   }
 
@@ -141,13 +150,13 @@ var specialCharacters = [
   
   // Function for getting a random element from an array
   function getRandom(arr) {
-  
+
   }
   
   // Function to generate password with user input
   function generatePassword() {
     
-  
+
   }
   
   // Get references to the #generate element
