@@ -182,6 +182,48 @@ var specialCharacters = [
     let guaranteedCharacters = [];
     let possibleCharacters = [];
 
+    //This line of code is checking if the user choose lowercase character, then pick random lowercase character and add it to guaranteed character arrays 
+    // And also add the entire lowercase character to possible character 
+    if (passwordOptions.lowercaseConfirmation){
+        guaranteedCharacters.push(getRandom(lowerCasedCharacters));
+        possibleCharacters=possibleCharacters.concat(lowerCasedCharacters);
+      }
+      
+      //This line of code is checking if the user choose uppercase character, then pick random uppercase character and add it to guaranteed character arrays 
+      // And also add the entire uppercase character to possible character  
+      if (passwordOptions.upperCaseConfirmation){
+        guaranteedCharacters.push(getRandom(upperCasedCharacters));
+        possibleCharacters=possibleCharacters.concat(upperCasedCharacters);
+      }
+
+      //This line of code is checking if the user choose numeric character, then pick random numeric character and add it to guaranteed character arrays 
+      // And also add the entire numeric character to possible character 
+      if (passwordOptions.numericConfirmation){
+        guaranteedCharacters.push(getRandom(numericCharacters));
+        possibleCharacters=possibleCharacters.concat(numericCharacters);
+      }
+
+      // This line of code is checking if the user choose specialCharacters, then pick random specialCharacters and add it to guaranteed character arrays 
+      // And also add the entire specialCharacters to possible character 
+      if (passwordOptions.specialCharactersConfirmation){
+        guaranteedCharacters.push(getRandom(specialCharacters));
+        possibleCharacters=possibleCharacters.concat(specialCharacters);
+      }
+
+      // This line of code will iterate the new password array with all the guranteed password characters 
+        for (let i =0; i< guaranteedCharacters.length; i++){
+            newPasswordArray[i] = guaranteedCharacters[i];
+        }
+
+        // This line of code will fill the rest of the new password array with random characters from possible characters
+        // And continues until the desired password length is acheived
+        for (let i =guaranteedCharacters.length; i< passwordOptions.passwordlength; i++){
+            newPasswordArray[i] = getRandom(possibleCharacters);
+        }
+        // This line of code converts array to string and return.
+        // This string is then returned as the final generated password.
+        return newPasswordArray.join("");
+      
   }
   
   // Get references to the #generate element
