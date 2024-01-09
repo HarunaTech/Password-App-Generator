@@ -147,7 +147,7 @@ var specialCharacters = [
   getPasswordOptions()
 
 
-  
+
   // Function for getting a random element from an array
   // This function provides a way to get a random element from an array each time it is called.
   // It ensures that the index is within the valid range for the given array arr.
@@ -173,7 +173,14 @@ var specialCharacters = [
   
   // Function to generate password with user input
   function generatePassword() {
-    
+
+    // declaring new variables   
+    // This line of code calls a function named getPasswordOptions() to obtain a set of options for generating a password.
+    // 
+    var passwordOptions =  getPasswordOptions();
+    let newPasswordArray = [];
+    let guaranteedCharacters = [];
+    let possibleCharacters = [];
 
   }
   
