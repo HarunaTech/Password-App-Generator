@@ -108,30 +108,30 @@ var specialCharacters = [
         return;
       }
 
-//  Confirmation prompt for user to choose Password characters 
+    //  Confirmation prompt for user to choose Password characters 
       var lowerCaseConfirmation = confirm("Do you want to have lower case characters in your Password?")
       var upperCaseConfirmation = confirm("Do you want to have UPPERCASE characters in your Password?")
       var numericConfirmation = confirm("Do you want to have Numeric characters in your Password?")
       var specialCharactersConfirmation = confirm("Do you want to have Special characters in your Password?")
 
 
-// This console.log is testing if thing are working correctly in the browser console
+  // This console.log is testing if thing are working correctly in the browser console
   console.log(passwordlength)
   console.log(lowerCaseConfirmation)
   console.log(upperCaseConfirmation)
   console.log(numericConfirmation)
   console.log(specialCharactersConfirmation)
 
-// This if statement check and  validate if user pick at least on character type 
-// It alerts user and make sure user choose one charater type before contnuing to generate password
+   // This if statement check and  validate if user pick at least on character type 
+  // It alerts user and make sure user choose one charater type before contnuing to generate password
       if (lowerCaseConfirmation === false && upperCaseConfirmation === false &&
             numericConfirmation === false && specialCharactersConfirmation === false){
                 alert("At least one charater must be selected in order to generate password. Please choose one charater type from the previous option!");
                 return;
             }
 
-// This function creates new object Password options and return back the calling function. 
-// It will check options for this password through the functions declared.
+  // This function creates new object Password options and return back the calling function. 
+ // It will check options for this password through the functions declared.
         let PasswordOptions = {
             passwordlength: passwordlength,
             lowerCaseConfirmation: lowerCaseConfirmation,
@@ -146,12 +146,30 @@ var specialCharacters = [
   // Used the calling fucntion getPasswordOptions() in order for the prompt function above to work/display 
   getPasswordOptions()
 
-  
+
   
   // Function for getting a random element from an array
+  // This function provides a way to get a random element from an array each time it is called.
+  // It ensures that the index is within the valid range for the given array arr.
+  // This will get and generate random index between 0 and array.length and truncate any decimal point
+  // It will generate a whole number between 0 (inclusive) and arr.length (exclusive).
   function getRandom(arr) {
 
+    // This will generate a random index within the bounds of the array
+    let randomIndex = Math.floor(Math.random() * arr.length);
+    
+    // This line retrieves the element at the randomly generated index from the array arr. 
+    // The selected element is then stored in the variable randomChar.
+    let randomChar = arr[randomIndex];
+
+    // This line logs the randomly selected character to the console. 
+    console.log("Random Char = ", randomChar);
+        
+    // This function returns the randomly selected character to the caller.
+    return randomChar;
+
   }
+  
   
   // Function to generate password with user input
   function generatePassword() {
